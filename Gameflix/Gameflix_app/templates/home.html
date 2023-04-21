@@ -1,0 +1,92 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" name="Gameflix" content="width=device-width, initial-scale=1">
+
+    <title>Homepage</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}">
+
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+    <body class="background">
+
+
+        <div class="header">
+
+            <p>GAMEFLIX</p>
+
+        </div>
+
+
+        <div id="menu">
+
+              <a href="/homepage"><span class="material-symbols-outlined">home</span>  Home</a>
+              <a href="/profile"><span class="material-symbols-outlined">manage_accounts</span> Profile</a>
+              <a href="/gallery"><span class="material-symbols-outlined">image</span>  Gallery</a>
+              <a href="/videos"><span class="material-symbols-outlined">videocam</span>  Videos</a>
+              <a href="/upload"><span class="material-symbols-outlined">upload_file</span>  Upload</a>
+              <a href="/logout"><span class="material-symbols-outlined">logout</span>  Log Out</a>
+
+
+        </div>
+
+        <div class="content">
+            <div class="content2">
+
+                    {% block content %}
+                    {% endblock %}
+
+            </div>
+        </div>
+
+
+
+
+        <div class="footer">
+
+            <h3>GAMEFLIX</h3>
+
+                <a href="https://www.facebook.com/">
+                    <h2 class="fa fa-facebook"></h2>
+                </a>
+
+                <a href="https://www.facebook.com/" >
+                    <h2 class="fa fa-google"></h2>
+                </a>
+
+                <a href="https://www.facebook.com/">
+                    <h2 class="fa fa-youtube"></h2>
+                </a>
+
+                <a href="https://www.facebook.com/">
+                    <h2 class="fa fa-linkedin"></h2>
+                </a>
+
+                <a href="https://www.facebook.com/">
+                    <h2 class="fa fa-instagram"></h2>
+                </a>
+
+            <h6>Created by: Me</h6>
+
+        </div>
+
+        <script src="{% static 'js/logobar.js' %}"></script>
+        <script src="{% static 'js/play_on_hover.js' %}"></script>
+    </body>
+</html>
+

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>To continue, login</title>
+    <div class="container_content">
+        <div class="form">
+            <h2 class="description">Join us !</h2>
+
+                {% for message in messages %}
+                    <h3>{{ message }}</h3>
+                {% endfor %}
+
+            <form method="post">
+            {% csrf_token %}
+            {{ register_form.as_p }}
+
+                <input type="checkbox" onclick="reveal()" id="box">Show password
+
+                    <p></p>
+
+                <button type="submit" class="btn">Create account</button>
+            </form>
+            <p>&nbsp;</p>
+
+            <p>Have an account? <a href="/login/">Click here to login</a></p>
+
+            <p>Click here to back to <a href="/">homepage</a></p>
+
+        </div>
+
+
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+
+  {% block content%}
+
+    {% for item in video %}
+
+
+          <div class="video_box">
+              <a href="{% url 'video_item' item.id %}">
+
+                <video muted loop class="vid">
+                  <source src="{{ item.video.url }}">
+                </video>
+              <h4>{{ item.title }}</h4>
+                  <hr class="hr">
+              <h6>Uploaded by:  {{ item.author }}</h6>
+
+            </a>
+          </div>
+
+
+    {% endfor %}
+
+  {% endblock %}

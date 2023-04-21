@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/direct_video.css' %}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,-25" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title> Gameflix | {{ video.title }} </title>
+</head>
+<body class="container">
+
+        <div class="header"> Gameflix </div>
+
+        <div id="menu">
+
+              <a href="/homepage"><span class="material-symbols-outlined">home</span>  Home</a>
+              <a href="/profile"><span class="material-symbols-outlined">manage_accounts</span> Profile</a>
+              <a href="/gallery"><span class="material-symbols-outlined">image</span>  Gallery</a>
+              <a href="/videos"><span class="material-symbols-outlined">videocam</span>  Videos</a>
+              <a href="/upload"><span class="material-symbols-outlined">upload_file</span>  Upload</a>
+              <a href="/logout"><span class="material-symbols-outlined">logout</span>  Log Out</a>
+
+
+        </div>
+
+        <div class="video">
+
+            <video width="1152" height="648" controls muted>
+              <source src="{{ video.video.url }}">
+            </video>
+            <h1>{{ video.title }}</h1>
+            <p><img src="{{ user.author.image.url }}" alt="{{ author.username }}'s profile photo"> {{ video.author }}</p>
+
+
+        </div>
+
+        <div class="commentsec">
+            {% block content %}
+
+            <h2>Dodaj komentarz</h2>
+              <form method="post">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <button type="submit">Dodaj komentarz</button>
+              </form>
+              <!-- Wyświetlenie komentarzy -->
+              {% for comment in comments.all %}
+            <h5> {{ comment.user.username }} </h5>
+
+            <div class="comment">
+                <p>{{ comment.content }}</p>
+            </div>
+
+              {% empty %}
+                <p>Brak komentarzy pod tym filmem</p>
+              {% endfor %}
+
+              <!-- Formularz dla komentarza -->
+
+
+            {% endblock %}
+        </div>
+    <script src="{% static 'js/logobar.js' %}"></script>
+</body>
+</html>

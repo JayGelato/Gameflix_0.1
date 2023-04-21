@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=PT+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+}@font-face {
+    font-family: 'Monoton';
+    src: url('/static/fonts/Monoton/Monoton-Regular.ttf')
+}
+
+.content {
+    margin-top: 6%;
+    padding: 10px;
+    color: white;
+}
+
+/* ------------------------Profile stylesheet classes------------------------------- */
+
+.profile_content {
+    padding: 10px;
+    height: inherit;
+    width: 50%;
+    border-radius: 8px;
+    background-color: #333;
+    text-align: left;
+    color: white;
+    vertical-align: center;
+    margin: auto;
+}
+
+.profile_image {
+    text-align: center;
+    border-radius: 50%;
+}
+
+.profile_image img{
+    max-width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile_content p{
+    font-size: 25px;
+    font-family: 'Caveat', cursive;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.profile_content b{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/*---------------------- Profile content end -------------------------------------------------------------------*/
+
+
+/*--------------- Logobar props ----------------*/
+
+#logobar {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Monoton', cursive;
+    font-size: 50px;
+    color: #ffffff;
+    transition: top 0.3s;
+}
+
+
+/* ------------------------------------ Top navigation bar section ---------------------------------------------*/
+
+.topnav {
+    margin: 0 auto;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: grey;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+.topnav span {
+    vertical-align: middle;
+}
+
+/* ------------------------ Top navigation bar section end --------------------------------- */
+
+
+#home_container {
+    /*background: #232423;*/
+    background: url('/static/images/background.jpg') no-repeat fixed;
+    background-size: cover;
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+

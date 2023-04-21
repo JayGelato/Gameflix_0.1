@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+        <title></title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+
+</head>
+
+    <body>
+
+
+        <div class="container">
+
+            <div class="bg_image"></div>
+
+          {% block content %}
+          {% endblock %}
+
+        </div>
+    <script src="{% static 'js/show-password.js' %}"></script>
+    </body>
+
+</html>
